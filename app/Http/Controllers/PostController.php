@@ -19,7 +19,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        echo 'Đã vào api post';
+        echo 'Đã vào api post222';
         die('hihi');
     }
 }
