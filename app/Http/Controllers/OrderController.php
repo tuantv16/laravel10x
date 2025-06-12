@@ -17,6 +17,8 @@ class OrderController extends Controller
             'total' => $request->total,
         ]);
  
+        //ghi chú nhé
+        
         // Thêm các sản phẩm vào đơn hàng
         if (isset($request->products) && is_array($request->products)) {
             foreach ($request->products as $product) {
