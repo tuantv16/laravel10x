@@ -1,0 +1,33 @@
+name: Laravel CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  laravel-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧾 Checkout source code
+        uses: actions/checkout@v3
+
+      - name: 🧰 Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+          extensions: mbstring, bcmath, xml
+          coverage: none
+
+      - name: 📦 Install Composer dependencies
+        run: composer install --no-progress --prefer-dist --optimize-autoloader
+
+      - name: 🗝️ Copy .env and generate APP_KEY
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: 🧪 Run Laravel Tests
+        run: php artisan test
