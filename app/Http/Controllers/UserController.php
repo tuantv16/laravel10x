@@ -22,7 +22,7 @@ class UserController extends Controller
         $data = $this->userRepository->getDataByConditions(1);
         echo '<pre>';
         dd($data);
-        die('sdf22');
+        die('TRẦN VĂN TUẤN');
     }
 
     /**
