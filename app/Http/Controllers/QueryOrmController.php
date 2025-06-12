@@ -20,7 +20,7 @@ class QueryOrmController extends Controller
      */
     public function index()
     {
-        // Setting 1 user vào 1 role
+        // Setting 1 user vào 1 role22
         //( Thêm 1 row vào bảng trung gian users_roles)
         // $data = $this->addUserRole(1,8);
         // $data = $this->addUserRole(1,9);
