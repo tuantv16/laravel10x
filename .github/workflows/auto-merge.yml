@@ -25,5 +25,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git fetch origin master:master
-          git merge master --no-ff -m "🤖 Auto-merge master into main [CI passed]"
+          git merge origin/master --allow-unrelated-histories --no-ff -m "Auto-merge master into main"
           git push origin main
