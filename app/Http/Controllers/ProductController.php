@@ -24,7 +24,7 @@ class ProductController extends Controller
             $query->where('category_id', $request->input('category_id'));
         }
 
-        // Lấy thông tin cột và thứ tự sắp xếp từ request
+        // Lấy thông tin cột và thứ tự sắp xếp từ request,..
         $sort_by = $request->input('sort_by', 'name');
         $sort_order = $request->input('sort_order', 'asc');
 
