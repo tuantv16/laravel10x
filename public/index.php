@@ -2,7 +2,7 @@
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
-// chao cac ban333
+// Thay đổi lần 4
 define('LARAVEL_START', microtime(true));
 
 /*
