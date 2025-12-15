@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh '''
                     php -v
-                    composer install --no-interaction --prefer-dist
+                    /usr/local/bin/composer install --no-interaction --prefer-dist
                 '''
             }
         }
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh '''
                     cp .env.example .env || true
-                    php artisan key:generate
+                    php artisan key:generate --force
                     php artisan test
                 '''
             }
